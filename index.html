@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bitcoin Ticker</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      name="viewport"
+      content="height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-light bg-light justify-content-between"
+      id="header"
+    >
+      <h1>
+        <i
+          >Bitcoin transaction tracker &Tab;<small
+            ><small>By Priyanshu, Harsh and Akshit</small></small
+          ></i
+        >
+      </h1>
+      <div class="btn-group btn-group-toggle">
+        <label class="btn btn-success" id="BTC">
+          <input type="radio" name="curr" /> BTC
+        </label>
+        <label class="btn btn-success" id="USD">
+          <input type="radio" name="curr" /> USD
+        </label>
+      </div>
+      <a href="https://github.com/crazicus/Bitcoin-Transaction-Tracker"
+        ><img src="src/github.png" alt="Github"
+      /></a>
+    </nav>
+    <div id="ticker">
+      <div class="info" id="max">Max transaction this session: 0.000BTC</div>
+      <div class="info" id="recent">Most recent transaction: 0.000BTC</div>
+    </div>
+    <div id="transactionModal" class="txmodal" role="dialog">
+      <div class="txmodal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Transaction</h5>
+          <span id="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group row">
+              <label for="hash" class="col-sm-4 col-form-label">Hash:</label>
+              <div class="col-sm-8">
+                <input
+                  id="hash"
+                  type="text"
+                  readonly
+                  class="form-control-plaintext"
+                  value="0x0000"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="time" class="col-sm-4 col-form-label">Time:</label>
+              <div class="col-sm-8">
+                <input
+                  id="time"
+                  type="text"
+                  readonly
+                  class="form-control-plaintext"
+                  value="00:00:00"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="size" class="col-sm-4 col-form-label"
+                >Transaction Size:</label
+              >
+              <div class="col-sm-8">
+                <input
+                  id="size"
+                  type="text"
+                  readonly
+                  class="form-control-plaintext"
+                  value="0B"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="txIndex" class="col-sm-4 col-form-label"
+                >Transaction Index:</label
+              >
+              <div class="col-sm-8">
+                <input
+                  id="txIndex"
+                  type="text"
+                  readonly
+                  class="form-control-plaintext"
+                  value="0"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputVals" class="col-sm-4 col-form-label"
+                >Input Values:</label
+              >
+              <div class="col-sm-8">
+                <ul id="inputVals" class="list-inline"></ul>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="outputVals" class="col-sm-4 col-form-label"
+                >Output Values:</label
+              >
+              <div class="col-sm-8">
+                <ul id="outputVals" class="list-inline"></ul>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="totalBTC" class="col-sm-4 col-form-label"
+                >Total Amount (BTC):</label
+              >
+              <div class="col-sm-8">
+                <input
+                  id="totalBTC"
+                  type="text"
+                  readonly
+                  class="form-control-plaintext"
+                  value="0.000BTC"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="totalUSD" class="col-sm-4 col-form-label"
+                >Total Amount (USD):</label
+              >
+              <div class="col-sm-8">
+                <input
+                  id="totalUSD"
+                  type="text"
+                  readonly
+                  class="form-control-plaintext"
+                  value="$0.00"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/ticker.js" type="text/javascript"></script>
+  </body>
+</html>
