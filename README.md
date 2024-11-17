@@ -38,8 +38,8 @@ This project is crafted with passion and innovation by:
 - **Priyanshu Chilwal**  
   GitHub: [@priyanshuchilwal](https://github.com/priyanshuchilwal)  
 
-- **Harsh [Vardhan Aggarwal]**  
+- **Harsh Vardhan Aggarwal**  
 
-- **Akshit **  
+- **Akshit**  
 
 We are a team of tech enthusiasts driven to make blockchain activity more accessible and engaging!
