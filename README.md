@@ -22,7 +22,6 @@ Welcome to the **Bitcoin Whale Transaction Tracker**, a real-time web applicatio
 
 ## 🖼️ Screenshots
 
-*(Include some eye-catching screenshots or GIFs of your application in action here.)*
 
 ## 📖 How It Works
 
